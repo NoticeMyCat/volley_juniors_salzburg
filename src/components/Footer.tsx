@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               {/* Logo ohne Quadrat, nur mit dezentem Schatten für Sichtbarkeit */}
               <img 
-                src="image.png" 
+                src="./image.png" 
                 alt="ASKÖ Volley Juniors Logo" 
                 className="h-14 w-14 object-contain drop-shadow-[0_2px_4px_rgba(255,255,255,0.3)]" 
               />
