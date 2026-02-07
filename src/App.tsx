@@ -7,16 +7,21 @@ import PrivacyPage from './pages/PrivacyPage';
 
 function App() {
   return (
-    <Router>
+    /* Der basename sorgt dafür, dass alle Links automatisch /volley_juniors_salzburg/ voranstellen */
+    <Router basename="/volley_juniors_salzburg">
       <div className="min-h-screen bg-white flex flex-col">
         <Navigation />
-        <div className="flex-grow pt-20">
+        <main className="flex-grow pt-20">
           <Routes>
+            {/* Pfade bleiben einfach, da der Router den basename intern managed */}
             <Route path="/" element={<Home />} />
             <Route path="/imprint" element={<ImprintPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
+            
+            {/* Fallback: Falls jemand eine falsche URL eingibt, zurück zur Startseite */}
+            <Route path="*" element={<Home />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>
