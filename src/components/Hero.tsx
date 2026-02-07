@@ -71,7 +71,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/10 rounded-3xl blur-2xl"></div>
               <div className="relative bg-white/15 backdrop-blur-md w-full h-full rounded-3xl flex items-center justify-center overflow-hidden border border-white/30 shadow-2xl">
                 <img
-                  src="image.png"
+                  src="./image.png"
                   alt="ASKÖ Volley Juniors Logo"
                   className="w-4/5 h-4/5 object-contain"
                 />
