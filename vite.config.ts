@@ -1,18 +1,19 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
-  base: 'volley_juniors_salzburg', // Change this to your repo name
-  plugins: [react()],
-})
-
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Der Name deines GitHub-Repositorys mit Slashes davor und danach
+  base: '/volley_juniors_salzburg/', 
+  
   plugins: [react()],
+  
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  
   build: {
-    copyPublicDir: false,
+    // Auf true setzen (oder weglassen), damit dein Logo aus /public mitkopiert wird
+    copyPublicDir: true, 
   },
 });
