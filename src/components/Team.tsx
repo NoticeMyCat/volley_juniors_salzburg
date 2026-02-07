@@ -3,21 +3,21 @@ import { Mail } from 'lucide-react';
 export default function Team() {
   const coaches = [
     {
-      name: 'Sarah Müller',
+      name: 'Tobi',
       role: 'Haupttrainerin',
       qualification: 'Diplom-Trainerin, UEFA B-Lizenz',
       specialization: 'Youth & Juniors',
       image: '/image.png',
     },
     {
-      name: 'Michael Wagner',
+      name: 'Michael',
       role: 'Co-Trainer',
       qualification: 'Staatlich geprüfter Trainer',
       specialization: 'Rookies & Mini-Volleyer',
       image: '/image.png',
     },
     {
-      name: 'Lisa Berger',
+      name: 'Lisa',
       role: 'Nachwuchstrainerin',
       qualification: 'C-Trainer-Lizenz',
       specialization: 'Mini-Volleyer & Ballschule',
