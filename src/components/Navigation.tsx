@@ -57,7 +57,7 @@ export default function Navigation() {
             onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)} 
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
-            <img src="image.png" alt="ASKÖ Volley Juniors Logo" className="h-14 w-14 sm:h-16 sm:w-16 object-contain" />
+            <img src="./image.png" alt="ASKÖ Volley Juniors Logo" className="h-14 w-14 sm:h-16 sm:w-16 object-contain" />
             <div className="hidden sm:block">
               <h1 className="text-base lg:text-lg font-bold text-gray-900 leading-tight whitespace-nowrap">
                 ASKÖ Volley Juniors
