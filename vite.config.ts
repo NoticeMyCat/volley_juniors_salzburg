@@ -32,5 +32,5 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   // Die 'base' Zeile kommt WEG!
-  build: { copyPublicDir: true } ist Standard, kann bleiben oder weg.
+  build: { copyPublicDir: true } 
 });
