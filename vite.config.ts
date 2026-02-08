@@ -21,7 +21,9 @@ export default defineConfig({
 });
 */
 
+
 // Vercel Settings
+/*
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -34,3 +36,4 @@ export default defineConfig({
   // Die 'base' Zeile kommt WEG!
   build: { copyPublicDir: true } 
 });
+*/
