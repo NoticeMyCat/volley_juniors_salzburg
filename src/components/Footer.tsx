@@ -8,7 +8,7 @@ const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => 
     e.preventDefault(); // Verhindert das Standard-Springen
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 500; // Dein Abstand in Pixeln (Header-Höhe + etwas Luft)
+      const headerOffset = 200; // Dein Abstand in Pixeln (Header-Höhe + etwas Luft)
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
