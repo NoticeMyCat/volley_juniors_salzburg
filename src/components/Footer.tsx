@@ -3,21 +3,6 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault(); // Verhindert das Standard-Springen
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = 200; // Dein Abstand in Pixeln (Header-Höhe + etwas Luft)
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
   
   return (
     <footer className="bg-gradient-to-br from-red-600 to-red-500 text-white pt-12 pb-8">
