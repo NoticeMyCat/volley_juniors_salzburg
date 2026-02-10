@@ -2,7 +2,7 @@ import { Heart, Award, Users, Target } from 'lucide-react';
 
 export default function Sponsoring() {
   return (
-    <section id="sponsoring" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="sponsoring" className="scroll-mt-16 py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
