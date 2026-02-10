@@ -25,9 +25,8 @@ export default function Navigation() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 100;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      const offsetPosition = elementPosition + window.pageYOffset;
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       setIsMobileMenuOpen(false);
     }
