@@ -21,7 +21,7 @@ export default function Footer() {
               />
               <div className="text-center md:text-left">
                 <h3 className="text-lg font-bold text-white">ASKÖ Volley Juniors</h3>
-                <p className="text-white/90">Salzburg</p>
+                <p className="tex-lm text-white/90">Salzburg</p>
               </div>
             </div>
             <p className="text-white/95 text-sm leading-relaxed text-center md:text-left">
