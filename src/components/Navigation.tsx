@@ -36,7 +36,7 @@ export default function Navigation() {
   const menuItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'Über Uns' },
-    { id: 'training', label: 'Angebote' },
+    { id: 'training', label: 'Training' },
     { id: 'team', label: 'Trainerteam' },
     { id: 'sponsoring', label: 'Sponsoring' },
     { id: 'registration', label: 'Anmeldung' },
