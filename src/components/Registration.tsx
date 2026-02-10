@@ -142,7 +142,7 @@ export default function Registration() {
                     value={formData.childName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-500 focus:outline-none transition-colors"
-                    placeholder="Max Mustermann"
+                 
                   />
                 </div>
 
@@ -158,7 +158,6 @@ export default function Registration() {
                     value={formData.childAge}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-500 focus:outline-none transition-colors"
-                    placeholder="10"
                     min="6"
                     max="17"
                   />
@@ -196,7 +195,7 @@ export default function Registration() {
                     value={formData.parentName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-500 focus:outline-none transition-colors"
-                    placeholder="Maria Mustermann"
+                    
                   />
                 </div>
 
@@ -212,7 +211,7 @@ export default function Registration() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-500 focus:outline-none transition-colors"
-                    placeholder="email@beispiel.at"
+                  
                   />
                 </div>
 
@@ -228,7 +227,7 @@ export default function Registration() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-500 focus:outline-none transition-colors"
-                    placeholder="+43 660 1234567"
+                   
                   />
                 </div>
 
@@ -243,7 +242,7 @@ export default function Registration() {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-500 focus:outline-none transition-colors resize-none"
-                    placeholder="Hast du noch Fragen oder Anmerkungen?"
+                   
                   ></textarea>
                 </div>
 
