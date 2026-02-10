@@ -116,7 +116,7 @@ export default function Footer() {
                 Impressum
               </Link>
               <span className="text-white/30">|</span>
-              <Link to="/privacy" className="text-white hover:text-white/80 transition-colors">
+              <Link to="/privacy/privacy" className="text-white hover:text-white/80 transition-colors">
                 Datenschutz
               </Link>
             </div>
