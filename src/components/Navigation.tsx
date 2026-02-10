@@ -23,8 +23,7 @@ export default function Navigation() {
       document.body.style.overflow = 'unset';
     }
   }, [isMobileMenuOpen]);
-
-  // --- DIE WICHTIGSTE ÄNDERUNG ---
+  
   // Keine Pixel-Berechnung mehr. Der Browser macht das jetzt selbst.
   const scrollToSection = (id: string) => {
     setIsMobileMenuOpen(false); // Menü sofort schließen
