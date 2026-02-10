@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
-              {/* Logo ohne Quadrat, nur mit dezentem Schatten für Sichtbarkeit */}
+             
               <img 
                 src="./image.png" 
                 alt="ASKÖ Volley Juniors Logo" 
