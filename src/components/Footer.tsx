@@ -21,7 +21,7 @@ export default function Footer() {
                 <p className="text-sm text-white/90">Salzburg</p>
               </div>
             </div>
-            <p className="text-white/95 text-sm leading-relaxed">
+            <p className="text-white/95 text-sm leading-relaxed text-center md:text-left">
               Volleyball für Kids & Teens – 
               mit Spaß, Teamgeist und professioneller Betreuung.
             </p>
