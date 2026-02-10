@@ -29,7 +29,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-lg font-bold text-white mb-4">Schnellzugriff</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center md:text-left w-full">
               <li>
                 <a href="#about" className="text-white hover:text-white/80 transition-colors text-sm">
                   Über Uns
