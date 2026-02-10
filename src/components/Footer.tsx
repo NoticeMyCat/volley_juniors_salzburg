@@ -112,11 +112,11 @@ export default function Footer() {
               © {currentYear} ASKÖ Volley Juniors Salzburg. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm">
-              <Link to="/imprint" className="text-white hover:text-white/80 transition-colors">
+              <Link to="/imprint" onClick={() => window.scrollTo(0, 0)} className="text-white hover:text-white/80 transition-colors">
                 Impressum
               </Link>
               <span className="text-white/30">|</span>
-              <Link to="/privacy/privacy" className="text-white hover:text-white/80 transition-colors">
+              <Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="text-white hover:text-white/80 transition-colors">
                 Datenschutz
               </Link>
             </div>
