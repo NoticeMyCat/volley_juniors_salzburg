@@ -25,7 +25,7 @@ export default function Footer() {
               Volleyball für Kids & Teens – 
               mit Spaß, Teamgeist und professioneller Betreuung.
             </p>
-          </div>
+          <div className="flex flex-col items-center md:items-start">
 
           <div>
             <h4 className="text-lg font-bold text-white mb-4">Schnellzugriff</h4>
