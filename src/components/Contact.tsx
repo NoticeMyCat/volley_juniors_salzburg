@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50">
+    <section id="contact" className="sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-14">
           <div className="flex justify-center mb-4 sm:mb-6">
