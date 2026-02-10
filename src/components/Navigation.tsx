@@ -50,7 +50,7 @@ export default function Navigation() {
   const menuItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'Über Uns' },
-    { id: 'training', label: 'Training' }, // Habe "& Angebote" gekürzt für mehr Platz
+    { id: 'training', label: 'Training & Angebote' }, 
     { id: 'team', label: 'Team' },
     { id: 'sponsoring', label: 'Sponsoring' },
     { id: 'registration', label: 'Anmeldung' },
