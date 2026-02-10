@@ -16,7 +16,7 @@ export default function Footer() {
                 alt="ASKÖ Volley Juniors Logo" 
                 className="h-14 w-14 object-contain drop-shadow-[0_2px_4px_rgba(255,255,255,0.3)]" 
               />
-              <div>
+              <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
                 <h3 className="text-lg font-bold text-white">ASKÖ Volley Juniors</h3>
                 <p className="text-sm text-white/90">Salzburg</p>
               </div>
