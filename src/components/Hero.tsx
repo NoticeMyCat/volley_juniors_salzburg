@@ -12,7 +12,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="scroll-mt-40 relative pt-20 pb-16 sm:pt-24 sm:pb-24 lg:pt-32 lg:pb-32 overflow-hidden bg-gradient-to-br from-red-600 via-red-500 to-orange-500">
+    <section id="home" className="scroll-mt-16 relative pt-20 pb-16 sm:pt-24 sm:pb-24 lg:pt-32 lg:pb-32 overflow-hidden bg-gradient-to-br from-red-600 via-red-500 to-orange-500">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 -right-40 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-32 -left-40 w-80 h-80 bg-yellow-400/10 rounded-full blur-3xl"></div>
