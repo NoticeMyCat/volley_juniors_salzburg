@@ -107,4 +107,4 @@ export default function Navigation() {
       )}
     </nav>
   );
-} wie sieht dann meine neue navigation.tsx mit den optimierungen aus
+}
