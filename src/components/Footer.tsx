@@ -43,7 +43,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#training" className="text-white hover:text-white/80 transition-colors text-sm">
-                  Training & Angebote
+                  Training
                 </a>
               </li>
               <li>
