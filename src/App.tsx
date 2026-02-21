@@ -7,18 +7,18 @@ import PrivacyPage from './pages/PrivacyPage';
 
 function App() {
   return (
-    /* Der Basename sagt React, dass die App im Unterordner startet */
+    /* The Basename tells React that the app starts in a subfolder */
     <Router basename="/volley_juniors_salzburg">
       <div className="min-h-screen bg-white flex flex-col">
         <Navigation />
         <main className="flex-grow pt-20">
           <Routes>
-            {/* Durch den Basename matcht "/" jetzt automatisch auf den Unterordner */}
+            {/* Because of the Basename, "/" now automatically matches the subfolder */}
             <Route path="/" element={<Home />} />
             <Route path="/imprint" element={<ImprintPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
-            
-            {/* WICHTIG: Falls ein Pfad nicht erkannt wird, lade die Home-Seite */}
+
+            {/* IMPORTANT: If a path is not recognized, load the Home page */}
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

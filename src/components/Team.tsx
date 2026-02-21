@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react';
+
 
 export default function Team() {
   const coaches = [
@@ -45,6 +45,8 @@ export default function Team() {
                   src={coach.image}
                   alt={coach.name}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

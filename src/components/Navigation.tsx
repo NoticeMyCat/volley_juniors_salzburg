@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom'; // 1. HIER IMPORTIEREN
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // 1. IMPORT HERE
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // 2. HOOKS INITIALISIEREN
+  // 2. INITIALIZE HOOKS
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -26,22 +26,22 @@ export default function Navigation() {
     }
   }, [isMobileMenuOpen]);
 
-  // 3. LOGIK ANPASSEN
+  // 3. ADJUST LOGIC
   const scrollToSection = (id: string) => {
-    setIsMobileMenuOpen(false); // Menü immer sofort schließen
+    setIsMobileMenuOpen(false); // Always close menu immediately
 
-    // Hilfsfunktion: Das eigentliche Scrollen (Deine Logik)
+    // Helper function: The actual scrolling
     const performScroll = () => {
       const element = document.getElementById(id);
       if (element) {
-        const offset = 30; // Dein gewünschter Offset
+        const offset = 30; // Your desired offset
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
     };
 
-    // SPEZIALFALL: HOME BUTTON
+    // SPECIAL CASE: HOME BUTTON
     if (id === 'home') {
       if (location.pathname !== '/') {
         navigate('/');
@@ -50,15 +50,15 @@ export default function Navigation() {
       return;
     }
 
-    // CHECK: Sind wir auf der Startseite?
+    // CHECK: Are we on the home page?
     if (location.pathname === '/') {
-      // Ja -> Direkt scrollen
+      // Yes -> Scroll directly
       performScroll();
     } else {
-      // Nein (z.B. Impressum) -> Erst zur Startseite navigieren
+      // No (e.g., Imprint) -> Navigate to home first
       navigate('/');
-      
-      // Kurz warten, bis die Startseite geladen ist, dann scrollen
+
+      // Wait briefly for the home page to load, then scroll
       setTimeout(() => {
         performScroll();
       }, 100);
@@ -77,28 +77,27 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled || isMobileMenuOpen ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 relative z-[110]"> 
+        <div className="flex justify-between items-center h-20 relative z-[110]">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             onClick={() => {
-              // Beim Klick aufs Logo auch Checken: Wenn nicht Home, dann navigieren
+              // Check on logo click: If not Home, then navigate
               if (location.pathname !== '/') navigate('/');
               window.scrollTo({ top: 0, behavior: 'smooth' });
               setIsMobileMenuOpen(false);
-            }} 
+            }}
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
-            <img src="./image.png" alt="ASKÖ Volley Juniors Logo" className="h-14 w-14 sm:h-16 sm:w-16 object-contain" />
+            <img src="./image.png" alt="ASKÖ Volley Juniors Logo" className="h-14 w-14 sm:h-16 sm:w-16 object-contain" loading="lazy" decoding="async" />
             <div className="hidden sm:block">
-              <h1 className="text-base lg:text-lg font-bold text-gray-900 leading-tight whitespace-nowrap">
+              <div className="text-base lg:text-lg font-bold text-gray-900 leading-tight whitespace-nowrap">
                 ASKÖ Volley Juniors
-              </h1>
+              </div>
               <p className="text-xs lg:text-sm text-red-600 font-medium">Salzburg</p>
             </div>
           </Link>

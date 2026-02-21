@@ -3,21 +3,23 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-gradient-to-br from-red-600 to-red-500 text-white pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Haupt-Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          
-        {/* 1. Logo & Beschreibung */}
+
+          {/* 1. Logo & Beschreibung */}
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
-              <img 
-                src="./image.png" 
-                alt="ASKÖ Volley Juniors Logo" 
-                className="h-14 w-14 object-contain drop-shadow-[0_2px_4px_rgba(255,255,255,0.3)]" 
+              <img
+                src="./image.png"
+                alt="ASKÖ Volley Juniors Logo"
+                className="h-12 w-12 sm:h-14 sm:w-14 object-contain drop-shadow-[0_2px_4px_rgba(255,255,255,0.3)]"
+                loading="lazy"
+                decoding="async"
               />
               {/* HIER GEÄNDERT: text-left statt text-center */}
               <div className="text-left">
@@ -27,7 +29,7 @@ export default function Footer() {
             </div>
             {/* Der Beschreibungstext darunter kann mittig bleiben oder auch links, wie du magst */}
             <p className="text-white/95 text-sm leading-relaxed text-center md:text-left">
-              Volleyball für Kids & Teens – 
+              Volleyball für Kids & Teens –
               mit Spaß, Teamgeist und professioneller Betreuung.
             </p>
           </div>

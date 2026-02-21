@@ -1,45 +1,9 @@
-import { useState } from 'react';
+
 import { Mail, Send } from 'lucide-react';
+import { useContactForm } from '../hooks/useContactForm';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [formError, setFormError] = useState('');
-
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormStatus('loading');
-    setFormError('');
-
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-email`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error('Fehler beim Versenden der Email');
-      }
-
-      setFormStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setFormStatus('idle'), 3000);
-    } catch (error) {
-      setFormStatus('error');
-      setFormError(error instanceof Error ? error.message : 'Ein Fehler ist aufgetreten');
-    }
-  };
+  const { formData, updateFormData, status: formStatus, errorMessage: formError, submitForm: handleFormSubmit } = useContactForm();
 
   return (
     <section id="contact" className="sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50">
@@ -84,9 +48,10 @@ export default function Contact() {
                 type="text"
                 required
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) => updateFormData('name', e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-400"
-                
+                maxLength={100}
+                pattern="^[A-Za-zÀ-ÿ\s\.\-]+$"
               />
             </div>
 
@@ -98,9 +63,9 @@ export default function Contact() {
                 type="email"
                 required
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) => updateFormData('email', e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-400"
-                
+                maxLength={100}
               />
             </div>
 
@@ -112,19 +77,19 @@ export default function Contact() {
                 required
                 rows={4}
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onChange={(e) => updateFormData('message', e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-400 resize-none"
-                
+                maxLength={1000}
               />
             </div>
 
             <button
               type="submit"
-              disabled={formStatus === 'loading'}
+              disabled={formStatus === 'submitting'}
               className="w-full bg-red-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-red-700 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg active:scale-95"
             >
               <Send className="w-5 h-5" />
-              {formStatus === 'loading' ? 'Wird versendet...' : 'E-Mail versendet'}
+              {formStatus === 'submitting' ? 'Wird versendet...' : 'E-Mail versendet'}
             </button>
           </form>
         </div>

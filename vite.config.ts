@@ -1,26 +1,32 @@
 // Github Settings
- 
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Der Name deines GitHub-Repositorys (wichtig für GitHub Pages)
-  base: '/volley_juniors_salzburg/', 
-  
+  // The name of your GitHub repository (important for GitHub Pages)
+  base: '/volley_juniors_salzburg/',
+
   plugins: [react()],
-  
+
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  
+
   build: {
-    // Muss auf true stehen, damit dein Logo aus dem /public Ordner kopiert wird
-    copyPublicDir: true, 
+    // Must be set to true so that your logo is copied from the /public folder
+    copyPublicDir: true,
+    target: 'esnext',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
+        },
+      },
+    },
   },
 });
-
-
 
 // Vercel Settings
 /*
@@ -33,7 +39,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  // Die 'base' Zeile kommt WEG!
+  // The 'base' line is REMOVED!
   build: { copyPublicDir: true } 
 });
 */

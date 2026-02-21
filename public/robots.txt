@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Prevent indexing of any potential admin or api routes if ever added
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://noticemycat.github.io/volley_juniors_salzburg/sitemap.xml
